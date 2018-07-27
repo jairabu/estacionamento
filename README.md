@@ -106,16 +106,10 @@ Dar clean no projeto
 3.12 Foi utilizado o Spring Initializr (https://start.spring.io) para a criação inicial do projeto Maven:
 
 ## Screenshots
-
-![Alt text](https://github.com/jairabu/estacionamento/blob/master/dash.PNG?raw=true "Dashboard")
-
-![Alt text](https://github.com/jairabu/estacionamento/blob/master/estacionamentos.PNG?raw=true "Estacionamentos")
-
-![Alt text](https://github.com/jairabu/estacionamento/blob/master/listagem.PNG?raw=true "Listagem")
-
-![Alt text](https://github.com/jairabu/estacionamento/blob/master/mobile.PNG?raw=true "Estacionamentos Mobile")
-
-
+![dash](https://user-images.githubusercontent.com/20683723/43300391-5a0b054e-9135-11e8-9448-8fb3d322d96a.png)
+![estacionamentos](https://user-images.githubusercontent.com/20683723/43300392-5ca17838-9135-11e8-82d5-aeda144084ac.png)
+![listagem](https://user-images.githubusercontent.com/20683723/43300395-5ead45a8-9135-11e8-809e-0d9eb6a8acff.png)
+![mobile](https://user-images.githubusercontent.com/20683723/43300396-60b17f90-9135-11e8-87c8-65ffd9d705e7.png)
 
 ## Creator
 
