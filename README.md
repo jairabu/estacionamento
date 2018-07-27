@@ -1,5 +1,4 @@
-A simple example of a CRUD application in Java using Spring Boot, Hibernate, Thymeleaf and Angular 5.
-
+Implementação de uma solução para controle de estacionamento, utilizando Java (Hibernate + Spring Boot + Lombok) e Angular 6.
 
 ## 1. Análise
 
