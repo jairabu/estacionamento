@@ -1,60 +1,60 @@
 A simple example of a CRUD application in Java using Spring Boot, Hibernate, Thymeleaf and Angular 5.
 
 
-## 1. An·lise
+## 1. An√°lise
 
-Na an·lise deve-se fazer o levantamento de requisitos, com o objetivo de apresentar as principais necessidades do cliente.
+Na an√°lise deve-se fazer o levantamento de requisitos, com o objetivo de apresentar as principais necessidades do cliente.
 
 ## 1.1 Requisitos
 
-Implementar uma soluÁ„o para controle de estacionamento, os requisitos necess·rios para a soluÁ„o s„o:
-ï AutenticaÁ„o via banco de dados
-ï Cadastro de Clientes (Nome, CPF, Telefone)
-ï Cadastro de VeÌculos (Placa, Modelo, Cor)
-ï Cadastro de P·tio (DescriÁ„o, N˙mero de Vagas, Taxa/hora)
-ï Estacionamento: Registrar entrada e saÌda de veÌculos tempo de permanÍncia e valor a ser pago. 
-ï Exibir um dash em tela com o total de vagas ocupadas e total livre.
+Implementar uma solu√ß√£o para controle de estacionamento, os requisitos necess√°rios para a solu√ß√£o s√£o:
+‚Ä¢ Autentica√ß√£o via banco de dados
+‚Ä¢ Cadastro de Clientes (Nome, CPF, Telefone)
+‚Ä¢ Cadastro de Ve√≠culos (Placa, Modelo, Cor)
+‚Ä¢ Cadastro de P√°tio (Descri√ß√£o, N√∫mero de Vagas, Taxa/hora)
+‚Ä¢ Estacionamento: Registrar entrada e sa√≠da de ve√≠culos tempo de perman√™ncia e valor a ser pago. 
+‚Ä¢ Exibir um dash em tela com o total de vagas ocupadas e total livre.
 
 ## 1.2 Diagrama de Classes
 
 O Diagrama de Classes abaixo foi feito com base nos requisitos.
-![Alt text](estacionamento/DER.png?raw=true "DER")
+![der](https://user-images.githubusercontent.com/20683723/43300358-300a3dfa-9135-11e8-99db-d527b5666c35.png)
 
-## 1.3 ObservaÁıes
+## 1.3 Observa√ß√µes
 
-N„o foi criada uma classe telefone pois pressumiu-se que o cliente possui apenas um ˙nico telefone.
-Todos os relacionamentos foram feitos de forma bidirecional, por exemplo, Veiculo possui uma vari·vel cor, e Cor possui uma vari·vel List<Veiculo>.
-Na classe Estacionamento o tempo de permanÍncia n„o foi salvo no Banco de Dados pois È uma vari·vel derivada que pode ser calculada facilmente atravÈs da entrada e saÌda do veÌculo. No entanto, foi criada a vari·vel valorPago pois a taxaHora pode mudar e n„o foi decidido armazenar o histÛrico de mudanÁas das taxas.
-A escolha de agregaÁ„o foi feita quando a remoÁ„o de um registro na Classe container n„o implica na remoÁ„o da classe contida, por exemplo: a remoÁ„o de Veiculo n„o implica em remoÁ„o de Cor, portanto È uma agregaÁ„o e n„o uma composiÁ„o.
-Pressumiu-se que o veÌculo somente pertence a um ˙nico cliente, caso o veÌculo seja de mais de um cliente ele ser· armazenado de forma repetida no Banco de Dados.
+N√£o foi criada uma classe telefone pois pressumiu-se que o cliente possui apenas um √∫nico telefone.
+Todos os relacionamentos foram feitos de forma bidirecional, por exemplo, Veiculo possui uma vari√°vel cor, e Cor possui uma vari√°vel List<Veiculo>.
+Na classe Estacionamento o tempo de perman√™ncia n√£o foi salvo no Banco de Dados pois √© uma vari√°vel derivada que pode ser calculada facilmente atrav√©s da entrada e sa√≠da do ve√≠culo. No entanto, foi criada a vari√°vel valorPago pois a taxaHora pode mudar e n√£o foi decidido armazenar o hist√≥rico de mudan√ßas das taxas.
+A escolha de agrega√ß√£o foi feita quando a remo√ß√£o de um registro na Classe container n√£o implica na remo√ß√£o da classe contida, por exemplo: a remo√ß√£o de Veiculo n√£o implica em remo√ß√£o de Cor, portanto √© uma agrega√ß√£o e n√£o uma composi√ß√£o.
+Pressumiu-se que o ve√≠culo somente pertence a um √∫nico cliente, caso o ve√≠culo seja de mais de um cliente ele ser√° armazenado de forma repetida no Banco de Dados.
 
 ## 2. Projeto
 
-No projeto deve-se escolher quais ferramentas, frameworks e linguagens devem ser utilizadas para criar uma soluÁ„o baseada no problema identificado na etapa de an·lise. As tecnologias (open-source) escolhidas foram: 
-ï Java 8: para desenvolver o Backend (servidor);
-ï Spring Boot: para integrar os Frameworks e Ferramentas do Java;
-ï Hibernate: Framework para salvar os objetos no Banco de Dados;
-ï Angular 2+: para desenvolver o Frontend (telas);
-ï Bootstrap com CSS Meta Queries: controlar responsividade (vers„o mobile das telas);
-ï PostgreSQL: Sistema Gerenciador de Banco de Dados;
-ï Lombok: para otimizar o cÛdigo Java.
-	Algumas decisıes de arquitetura:
-ï Uso de GenericDAO.java para persistÍncia de objetos no Banco de Dados,
-ï Uso de GenericController.java para a criaÁ„o de controladores MVC.
-ï Uso de Maven: para baixar todos os frameworks utilizados no Java.
-ï N„o foi criada uma camada de serviÁo e repositÛrio, para simplificar a arquitetura e n„o haver necessidade a priori.
-ï Uso de generic.component.ts no Frontned para efetuar o CRUD b·sico das telas.
-ï Uso de generic.service.ts no Frontend para efetuar as requisiÁıes HTTP com JSON do CRUD b·sico.
+No projeto deve-se escolher quais ferramentas, frameworks e linguagens devem ser utilizadas para criar uma solu√ß√£o baseada no problema identificado na etapa de an√°lise. As tecnologias (open-source) escolhidas foram: 
+‚Ä¢ Java 8: para desenvolver o Backend (servidor);
+‚Ä¢ Spring Boot: para integrar os Frameworks e Ferramentas do Java;
+‚Ä¢ Hibernate: Framework para salvar os objetos no Banco de Dados;
+‚Ä¢ Angular 2+: para desenvolver o Frontend (telas);
+‚Ä¢ Bootstrap com CSS Meta Queries: controlar responsividade (vers√£o mobile das telas);
+‚Ä¢ PostgreSQL: Sistema Gerenciador de Banco de Dados;
+‚Ä¢ Lombok: para otimizar o c√≥digo Java.
+	Algumas decis√µes de arquitetura:
+‚Ä¢ Uso de GenericDAO.java para persist√™ncia de objetos no Banco de Dados,
+‚Ä¢ Uso de GenericController.java para a cria√ß√£o de controladores MVC.
+‚Ä¢ Uso de Maven: para baixar todos os frameworks utilizados no Java.
+‚Ä¢ N√£o foi criada uma camada de servi√ßo e reposit√≥rio, para simplificar a arquitetura e n√£o haver necessidade a priori.
+‚Ä¢ Uso de generic.component.ts no Frontned para efetuar o CRUD b√°sico das telas.
+‚Ä¢ Uso de generic.service.ts no Frontend para efetuar as requisi√ß√µes HTTP com JSON do CRUD b√°sico.
 
-## 3. InstalaÁ„o
-Os links para instalaÁ„o do software s„o apresentador a seguir.
-3.1 Instalar JDK do Java (Vers„o 8):
+## 3. Instala√ß√£o
+Os links para instala√ß√£o do software s√£o apresentador a seguir.
+3.1 Instalar JDK do Java (Vers√£o 8):
 http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html
 
-3.2 Instalar Eclipse IDE for Java EE Developers (Vers„o Photon):
+3.2 Instalar Eclipse IDE for Java EE Developers (Vers√£o Photon):
 http://www.eclipse.org/downloads/eclipse-packages/
 
-3.3 Instalar PostgreSQL (Vers„o 9.6 ou superior):
+3.3 Instalar PostgreSQL (Vers√£o 9.6 ou superior):
 https://www.postgresql.org/download/windows/
 
 3.4 Instalar Atom:
@@ -72,7 +72,7 @@ cd \
 ng new estacionamento-frontend
 cd estacionamento-frontend
 
-3.8 Instalar mÛdulos dentro da pasta angular-crud do projeto:
+3.8 Instalar m√≥dulos dentro da pasta angular-crud do projeto:
 npm install --save @angular/material @angular/cdk
 npm install --save angular/material2-builds angular/cdk-builds
 npm install --save @angular/animations
@@ -81,9 +81,9 @@ npm install --save bootstrap
 npm install --save @ng-bootstrap/ng-bootstrap
 npm install --save ng2-currency-mask
 npm install --save web-animations-js
-npm audit fix ñforce
+npm audit fix ‚Äìforce
 
-3.9 Adicionar as 3 linhas abaixo dentro da tag ìstylesî que fica dentro do arquivo angular.json (removendo a linha ìstyles.cssî:
+3.9 Adicionar as 3 linhas abaixo dentro da tag ‚Äústyles‚Äù que fica dentro do arquivo angular.json (removendo a linha ‚Äústyles.css‚Äù:
 
 "styles": [
               "src/styles.scss",
@@ -103,7 +103,7 @@ ng serve --open
 Dar update maven
 Dar clean no projeto
 
-3.12 Foi utilizado o Spring Initializr (https://start.spring.io) para a criaÁ„o inicial do projeto Maven:
+3.12 Foi utilizado o Spring Initializr (https://start.spring.io) para a cria√ß√£o inicial do projeto Maven:
 
 ## Screenshots
 
@@ -119,7 +119,7 @@ Dar clean no projeto
 
 ## Creator
 
-**Jair AlarcÛn**
+**Jair Alarc√≥n**
 
 - E-mail: jairabu@gmail.com
 - LinkedIn: https://www.linkedin.com/in/jair-alarc%C3%B3n-84067b13/
