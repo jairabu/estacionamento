@@ -18,7 +18,7 @@ Implementar uma solução para controle de estacionamento, os requisitos necessári
 ## 1.2 Diagrama de Classes
 
 O Diagrama de Classes abaixo foi feito com base nos requisitos.
-![Alt text](https://github.com/jairabu/estacionamento/blob/master/DER.PNG?raw=true "DER")
+![Alt text](https://github.com/jairabu/estacionamento/DER.PNG?raw=true "DER")
 
 ## 1.3 Observações
 
