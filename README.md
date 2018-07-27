@@ -116,8 +116,8 @@ Dar clean no projeto
 **Jair Alarcón**
 
 - E-mail: jairabu@gmail.com
-- LinkedIn: https://www.linkedin.com/in/jair-alarc%C3%B3n-84067b13/
-
+- LinkedIn: www.linkedin.com/in/jairabu
 - Facebook: www.facebook.com/jairabu
 - Instagram: https://www.instagram.com/jairabu
 - Github: https://github.com/jairabu
+- Youtube: www.youtube.com/jairabu
